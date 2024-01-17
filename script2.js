@@ -5,7 +5,7 @@ var resultados = [];
 for (let boton of botones) {
   boton.addEventListener("click", function () {
     let simboloJug = boton.getAttribute("id");
-    console.log(simboloJug);
+    //console.log(simboloJug);
 
     switch (simboloJug) {
       case "piedra":
@@ -14,6 +14,7 @@ for (let boton of botones) {
         gestionarRonda(simboloJug);
         break;
       case "trampa":
+        trampa();
         break;
       case "fin":
         final();
@@ -99,19 +100,44 @@ function mostrarSimboloDOM(simboloJug, simboloIA) {
   resultadoIA.textContent = simboloIA;
 }
 
+function porcentajeVictorias(partidas, puntos){
+  return (puntos/partidas)*100;
+}
+
 function final() {
   let contadorPuntos = 0;
-  let numerorondas = resultados.length();
-
-  for (let i = 0; i < resultados.length; i++) {
-    
-  }
+  let numerorondas = resultados.length;
 
   for (let resultado of resultados) {
     if (resultado.puntos == 1) {
       contadorPuntos++;
     }
   }
-  window.alert(contadorPuntos);
-  location.reload();
+
+  window.alert("El jugador ha obtenido un total de: "+contadorPuntos+" y su porcentaje de victorias es un total del: "+porcentajeVictorias(numerorondas, contadorPuntos)+"%");
+  console.log(resultados);
+  //location.reload();
+}
+
+function trampaActivada(){
+  let activada = new Boolean(false);
+  if(activada){
+    return false;
+  }else{
+    return true;
+  }
+}
+function trampa(){
+  if(!trampaActivada){
+    console.log("la trampa se ha activado");
+  }else{
+    console.log("la trampa se ha desactivado");
+  }
+}
+
+function mostrarHistorial(arrayResultados){
+  
+  for (let i = 0; i < array.length; i++) {
+        
+  }
 }
