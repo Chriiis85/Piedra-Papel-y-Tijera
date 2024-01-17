@@ -5,35 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <script defer src="script2.js"></script>
+    <script defer src="script.js"></script>
   </head>
   <body>
+    <h1>PIEDRA PAPEL O TIJERA - CHRISTIAN MORENO DIAZ</h1>
     <section class="container">
-      <article class="resultados">
-        <div class="jugador">Piedra</div>
-        <div class="IA">Papel</div>
+      <article class="ventana">
+        <h1 class="letrero">¡¡BIENVENIDO AL JUEGO!!</h1>
+        <article class="resultados">
+          <div class="jugador"><p id="jugador">&#10067;</p></div>
+          <div class="IA"><p id="IA">&#10067;</p></div>
+        </article>
+        <article class="botones">
+          <button class="start-btn" id="piedra">Piedra</button>
+          <button class="start-btn" id="papel">Papel</button>
+          <button class="start-btn" id="tijera">Tijera</button>
+          <button class="start-btn" id="trampa">Trampa</button>
+          <button class="start-btn" id="fin">Fin</button>
+        </article>
       </article>
-      <article class="botones">
-        <button id="piedra">Piedra</button>
-        <button id="papel">Papel</button>
-        <button id="tijera">Tijera</button>
-        <button id="trampa">Trampa</button>
-        <button id="fin">Fin</button>
-      </article>
-
-      <article>
+      <!--<article>
         <table>
           <thead>
             <td>Hola</td>
             <td>Hola</td>
             <td>Hola</td>
           </thead>
-          
+
           <tr>
             <td colspan="3">Porcentaje de victorias del jugador</td>
           </tr>
         </table>
-      </article>
+      </article>-->
     </section>
   </body>
 </html>
