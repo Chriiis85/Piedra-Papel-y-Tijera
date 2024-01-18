@@ -160,7 +160,7 @@ function hacerTrampas(simboloSelect) {
   if (random < 8) {
     return ganarMaquina(simboloSelect);
   } else {
-    return perderMaquina(simboloSelect);
+    return empatarMaquina(simboloSelect);
   }
 }
 
@@ -175,13 +175,6 @@ function ganarMaquina(simboloJugador) {
   }
 }
 
-function perderMaquina(simboloJugador) {
-  switch (simboloJugador) {
-    case "piedra":
-      return "tijera";
-    case "papel":
-      return "piedra";
-    case "tijera":
-      return "papel";
-  }
+function empatarMaquina(simboloJugador) {
+  return simboloJugador;
 }
