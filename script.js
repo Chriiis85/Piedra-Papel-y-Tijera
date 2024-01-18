@@ -128,7 +128,7 @@ function dameEmoji(simbolo) {
 }
 
 function porcentajeVictorias(partidas, puntos) {
-  return Math.floor((puntos / partidas) * 100);
+  return Math.round((puntos / partidas) * 100);
 }
 
 function final() {
