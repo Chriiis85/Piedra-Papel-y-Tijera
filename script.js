@@ -157,10 +157,12 @@ function mostrarHistorial(arrayResultados) {
 
 function hacerTrampas(simboloSelect) {
   let random = Math.floor(Math.random() * 10);
-  if (random < 8) {
+  if (random < 4) {
     return ganarMaquina(simboloSelect);
-  } else {
+  } else if (random > 4 && random < 8) {
     return empatarMaquina(simboloSelect);
+  } else {
+    perderMaquina(simboloJugador);
   }
 }
 
@@ -177,4 +179,15 @@ function ganarMaquina(simboloJugador) {
 
 function empatarMaquina(simboloJugador) {
   return simboloJugador;
+}
+
+function perderMaquina(simboloJugador) {
+  switch (simboloJugador) {
+    case "piedra":
+      return "tijera";
+    case "papel":
+      return "piedra";
+    case "tijera":
+      return "papel";
+  }
 }
